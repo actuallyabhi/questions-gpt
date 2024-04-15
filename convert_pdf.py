@@ -1,5 +1,5 @@
-from functions import upload_file, initiate_interaction, trigger_assistant, convert_to_json, update_assistant
-from prompt import MCQ_prompt
+from utils.functions import upload_file, initiate_interaction, trigger_assistant, convert_to_json, update_assistant
+from utils.prompt import MCQ_prompt
 import json
 import csv
 import os
@@ -69,3 +69,7 @@ if __name__ == "__main__":
         except Exception as e:
             print(e)
             sys.exit(1)
+
+    else:
+        print(f"File not found: {file_path}")
+        sys.exit(1)
